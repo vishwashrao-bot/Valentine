@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Be My Valentine 💕</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Poppins', cursive;
+  background: linear-gradient(135deg, #ffd6e8, #ffeaf3);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Floating names */
+.name-float {
+  position: fixed;
+  font-size: 18px;
+  color: #ff4d88;
+  opacity: 0.7;
+  animation: floatUp 6s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); }
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  max-width: 360px;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  color: #ff4d88;
+  font-size: 20px;
+}
+
+.photo {
+  width: 100%;
+  border-radius: 18px;
+  margin: 15px 0;
+}
+
+/* Normal button */
+button {
+  background: #ff85b3;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 8px;
+}
+
+/* GLOWING BUTTON */
+.glow {
+  animation: glowPulse 1.5s infinite;
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 5px #ff5c9d; }
+  50% { box-shadow: 0 0 25px #ff2f7a; transform: scale(1.05); }
+  100% { box-shadow: 0 0 5px #ff5c9d; }
+}
+
+.panda-party {
+  display: none;
+  margin-top: 15px;
+}
+
+.panda {
+  font-size: 48px;
+  animation: dance 0.6s infinite alternate;
+}
+
+@keyframes dance {
+  from { transform: rotate(-10deg) translateY(0); }
+  to { transform: rotate(10deg) translateY(-10px); }
+}
+
+.confetti {
+  position: fixed;
+  top: -10px;
+  font-size: 18px;
+  animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh) rotate(360deg); }
+}
+
+.firework {
+  position: fixed;
+  font-size: 30px;
+  animation: pop 1s ease-out forwards;
+}
+
+@keyframes pop {
+  from { transform: scale(0); opacity: 1; }
+  to { transform: scale(2); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <h1>
+    Hello Sukanya Mishra
